@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: DeanoDee/tester
+  
+media_folder: static/assets
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
+  
+collections:
+  - name: things
+    label: things
+    folder: static/things
+    extension: json
+    create: true
+    fields:
+      - { name: title, label: Name, widget: string }
