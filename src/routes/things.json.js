@@ -3,18 +3,18 @@ let data = [];
 let dir = `${process.cwd()}/static/things/`;
 let dest = `${process.cwd()}/static/things.json`;
 
-fs.readdir(dir, (err, files) => {
-    return new Promise((resolve, reject) => {
-        if (err) reject(err);
-        files.forEach(file => {
-           let content = require(`${dir}${file}`);
-           content.slug = file.replace('.json','');
-           data = [...data, content];
-        });
-        resolve(data);
-    }).then(data => {
-        fs.writeFileSync(dest,JSON.stringify(data));
-    }).catch(error => {
-        console.log('Failed to write ${dest} because of ${error.message}');
-    });
-})
+let files = fs.readdirSync(dir);
+files.forEach(file => {
+   let content = require(`${dir}${file}`);
+   content.slug = file.replace('.json','');
+   data = [...data, content];
+});
+let json = JSON.stringify(data);
+
+export function get(req, res) {
+	res.writeHead(200, {
+		'Content-Type': 'application/json'
+	});
+    console.log(json);
+	res.end(json);
+}
