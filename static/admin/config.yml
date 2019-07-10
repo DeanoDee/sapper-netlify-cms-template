@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: DeanoDee/tester
+  repo: DeanoDee/sapper-netlify-cms-template
   
 media_folder: static/assets
 
