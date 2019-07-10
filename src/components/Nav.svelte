@@ -50,12 +50,16 @@
 		padding: 1em 0.5em;
 		display: block;
 	}
+	.anchor-like {
+		text-decoration: none;
+		padding: 1em 0.5em;
+	}
 </style>
 
 <nav>
 	<ul>
 		<li><a class='{segment === undefined ? "selected" : ""}' href='.'>home</a></li>
 		<li><a class='{segment === "about" ? "selected" : ""}' href='about'>about</a></li>
-		<li><a on:click|preventDefault={goToAdmin} href='admin'>admin</a></li>
+		<li><div class="anchor-like" on:click={goToAdmin}>admin</div></li>
 	</ul>
 </nav>

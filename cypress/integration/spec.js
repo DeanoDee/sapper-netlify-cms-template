@@ -1,6 +1,7 @@
 describe('Sapper template app', () => {
 	beforeEach(() => {
 		cy.visit('/')
+		cy.wait(200);
 	});
 
 	it('has the correct <h1>', () => {
@@ -13,7 +14,7 @@ describe('Sapper template app', () => {
 	});
 
 	it('navigates to /admin', () => {
-		cy.get('nav a').contains('admin').click();
+		cy.get('nav div').contains('admin').click();
 		cy.url().should('include', '/admin');
 	});
 });
