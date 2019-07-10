@@ -1,4 +1,4 @@
-# sapper-template
+# sapper-netlify-cms-template
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b9f52760-b711-4250-a761-accec84dd4bd/deploy-status)](https://app.netlify.com/sites/suspicious-feynman-669759/deploys)
 
