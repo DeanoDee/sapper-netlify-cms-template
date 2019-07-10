@@ -56,6 +56,6 @@
 	<ul>
 		<li><a class='{segment === undefined ? "selected" : ""}' href='.'>home</a></li>
 		<li><a class='{segment === "about" ? "selected" : ""}' href='about'>about</a></li>
-		<li><a on:click={goToAdmin}>admin</a></li>
+		<li><a on:click|preventDefault={goToAdmin} href='admin'>admin</a></li>
 	</ul>
 </nav>
