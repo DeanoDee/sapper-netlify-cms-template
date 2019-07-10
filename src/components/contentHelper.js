@@ -39,13 +39,5 @@ function createListJSON(dir, filterKeys) {
     return JSON.stringify(data);
 }
 
-/**
- * This is a convenience function to grab the raw json from the published directory and return it in [slug].json.js file
- */
-function getRawJSON(dir, file){
-    const content = require(`${dir}${file}`);
-    return JSON.stringify(content)
-}
 
-
-export { createListJSON, getRawJSON };
+export { createListJSON };

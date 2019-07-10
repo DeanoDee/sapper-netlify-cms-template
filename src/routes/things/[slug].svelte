@@ -62,5 +62,5 @@
 <h1>{title}</h1>
 
 <blockquote class='content'>
-	{@html quote}
+	{quote}
 </blockquote>

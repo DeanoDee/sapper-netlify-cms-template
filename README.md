@@ -6,9 +6,7 @@ The is a [Sapper](https://github.com/sveltejs/sapper) template that includes Net
 
 ```bash
 # for Rollup
-npx degit "sveltejs/sapper-template#rollup" my-app
-# for webpack
-npx degit "sveltejs/sapper-template#webpack" my-app
+npx degit "DeanoDee/sapper-netlify-cms-template" my-app
 cd my-app
 npm install # or yarn!
 npm run dev
@@ -34,11 +32,11 @@ We've included an netlify.toml that defines the build command and publish direct
 
 ### contentHelper
 
-In order to generate a list page where we can link to all the published items and pages where we can view the details of those published items (things in the case of the example files) we created a file called contentHelper. You can see how it's being used in /src/routes/things.json.js to product a list of all the data with only a subset of the published key values and how it's being used in /src/routes/things/[slug].json.js to produce the data for the details page. 
+In order to generate a list page where we can link to all the published items (things in the case of the example files) we created a file called contentHelper. You can see how it's being used in /src/routes/things.json.js to product a list of all the data with only a subset of the published key values. 
 
 ### Netlify CMS details
 
-The html for netlify cms and the config.yml to define the data types are in /static/admin. We've added a button to the navbar when you load the demo - probably want to get rid of that at some point. We are publishing to the /src/content directory. This appeared to be more stable then publishing in the /static/. Thusly, our structure colours a bit outside the lines of a pure Sapper architecture. 
+The html for netlify cms and the config.yml to define the data types are in /static/admin. We've added a button to the navbar when you load the demo - probably want to get rid of that at some point. We are publishing to the /static/things directory.
 
 ## Credit where credit is due 
 

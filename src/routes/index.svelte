@@ -51,7 +51,7 @@
 <h1>We Have Things!</h1>
 
 <figure>
-	<img alt='Borat' src='thingOneThingTwo.png'>
+	<img alt='Thing One and Thing Two' src='thingOneThingTwo.png'>
 </figure>
 
 <ul>

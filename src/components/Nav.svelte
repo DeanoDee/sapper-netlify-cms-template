@@ -1,5 +1,9 @@
 <script>
 	export let segment;
+	
+	function goToAdmin() {
+		window.location.href = '/admin/';
+	}
 </script>
 
 <style>
@@ -52,9 +56,6 @@
 	<ul>
 		<li><a class='{segment === undefined ? "selected" : ""}' href='.'>home</a></li>
 		<li><a class='{segment === "about" ? "selected" : ""}' href='about'>about</a></li>
-
-		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch class='{segment === "admin" ? "selected" : ""}' href='admin/'>admin</a></li>
+		<li><a on:click={goToAdmin}>admin</a></li>
 	</ul>
 </nav>

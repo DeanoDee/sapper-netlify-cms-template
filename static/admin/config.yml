@@ -12,7 +12,7 @@ slug:
 collections:
   - name: things
     label: things
-    folder: src/content
+    folder: static/things
     extension: json
     create: true
     fields:
