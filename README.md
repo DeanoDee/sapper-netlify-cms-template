@@ -1,6 +1,8 @@
 # sapper-template
 
-The default [Sapper](https://github.com/sveltejs/sapper) template, with branches for Rollup and webpack. To clone it and get started:
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b9f52760-b711-4250-a761-accec84dd4bd/deploy-status)](https://app.netlify.com/sites/suspicious-feynman-669759/deploys)
+
+The is a [Sapper](https://github.com/sveltejs/sapper) template that includes Netlify CMS and some helper functionality, using Rollup. To clone it and get started:
 
 ```bash
 # for Rollup
@@ -14,8 +16,33 @@ npm run dev
 
 Open up [localhost:3000](http://localhost:3000) and start clicking around.
 
-Consult [sapper.svelte.dev](https://sapper.svelte.dev) for help getting started.
+Consult [sapper.svelte.dev](https://sapper.svelte.dev) for help getting started on the coding portion of this and [Netlify CMS](https://www.netlifycms.org)
 
+## Assumptions
+This template was created with the assumption that you would like to use Netlify CMS and publish on Neflify. It may be adaptable to other usage, but other publishing solution was not considered to be in scope.
+
+It also assumes that the person using it will have to jump through a number of hoops to get the whole identity thing happening with Netlify CMS. A few helpful links on the subject are:
+* [Netlify Authentication configuration](https://www.netlifycms.org/docs/authentication-backends/)
+* [Neflify Identity documentaiton](https://www.netlify.com/docs/identity/)
+* [Set up an Oauth pfovider](https://www.netlify.com/docs/authentication-providers/)
+
+## Particulars of this template
+
+### Netlify.toml
+
+We've included an netlify.toml that defines the build command and publish directory, it should be enough to get started. If you want to use the Netlify CLI you'll have to do a bit more work.
+
+### contentHelper
+
+In order to generate a list page where we can link to all the published items and pages where we can view the details of those published items (things in the case of the example files) we created a file called contentHelper. You can see how it's being used in /src/routes/things.json.js to product a list of all the data with only a subset of the published key values and how it's being used in /src/routes/things/[slug].json.js to produce the data for the details page. 
+
+### Netlify CMS details
+
+The html for netlify cms and the config.yml to define the data types are in /static/admin. We've added a button to the navbar when you load the demo - probably want to get rid of that at some point. We are publishing to the /src/content directory. This appeared to be more stable then publishing in the /static/. Thusly, our structure colours a bit outside the lines of a pure Sapper architecture. 
+
+## Credit where credit is due 
+
+This project builds off the [default Sapper template](https://github.com/sveltejs/sapper-template) all the documentation below are their amazing words. 
 
 ## Structure
 

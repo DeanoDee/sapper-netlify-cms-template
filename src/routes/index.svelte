@@ -1,3 +1,15 @@
+<script context="module">
+	export function preload({ params, query }) {
+		return this.fetch(`things.json`).then(r => r.json()).then(things => {
+			return { things };
+		});
+	}
+</script>
+
+<script>
+	export let things;
+</script>
+
 <style>
 	h1, figure, p {
 		text-align: center;
@@ -33,14 +45,23 @@
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Sapper & Netlify CMS project template</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<h1>We Have Things!</h1>
 
 <figure>
-	<img alt='Borat' src='great-success.png'>
-	<figcaption>HIGH FIVE!</figcaption>
+	<img alt='Borat' src='thingOneThingTwo.png'>
 </figure>
 
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+<ul>
+	{#each things as thing}
+		<!-- we're using the non-standard `rel=prefetch` attribute to
+				tell Sapper to load the data for the page as soon as
+				the user hovers over the link or taps it, instead of
+				waiting for the 'click' event -->
+		<li><a rel='prefetch' href='things/{thing.slug}'>{thing.title}</a></li>
+	{/each}
+</ul>
+
+<p><strong>Take a look at <a href="about">about</a> to see what you might want to edit.</strong></p>

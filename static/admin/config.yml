@@ -12,8 +12,9 @@ slug:
 collections:
   - name: things
     label: things
-    folder: static/things
+    folder: src/content
     extension: json
     create: true
     fields:
       - { name: title, label: Name, widget: string }
+      - { name: quote, label: Quote, widget: string }
