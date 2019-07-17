@@ -1,7 +1,7 @@
 {
-  "name": "TODO",
-  "description": "TODO",
-  "version": "0.0.1",
+  "name": "sapper-netlify-cms-template",
+  "description": "The is a Sapper template that includes Netlify CMS and some helper functionality,",
+  "version": "1.0.0",
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build --legacy",
@@ -17,14 +17,14 @@
     "sirv": "^0.4.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
+    "@babel/core": "^7.5.4",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "@babel/runtime": "^7.0.0",
+    "@babel/preset-env": "^7.5.4",
+    "@babel/runtime": "^7.5.4",
     "cypress": "^3.4.0",
     "npm-run-all": "^4.1.5",
-    "rollup": "^1.0.0",
+    "rollup": "^1.17.0",
     "rollup-plugin-babel": "^4.0.2",
     "rollup-plugin-commonjs": "^9.1.6",
     "rollup-plugin-node-resolve": "^4.0.0",
@@ -32,6 +32,6 @@
     "rollup-plugin-svelte": "^5.0.1",
     "rollup-plugin-terser": "^4.0.4",
     "sapper": "^0.27.0",
-    "svelte": "^3.0.0"
+    "svelte": "^3.6.7"
   }
 }

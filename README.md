@@ -24,6 +24,18 @@ It also assumes that the person using it will have to jump through a number of h
 * [Neflify Identity documentaiton](https://www.netlify.com/docs/identity/)
 * [Set up an Oauth pfovider](https://www.netlify.com/docs/authentication-providers/)
 
+For my setup I went to Settings > Identity in Netlify:
+1. Enabled identity
+2. Change registration to Invite Only (to limit the users to only those I've approved)
+3. Enabled Github as an external provider
+4. Scrolled further down to service and enabled the Git Gateway (that way the CMS could comunicate with GitHub's API for pushing changes)
+
+After generating my Oauth provider as per the third link above I navigated over to Settings > Access control in Netlify: 
+1. Clicked Install provider
+2. Added my Client ID and Secret which I had received by setting up the app in GitHub
+
+
+
 ## Particulars of this template
 
 ### Netlify.toml
